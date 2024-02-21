@@ -16,6 +16,16 @@ namespace ProblematicProblem
             Console.Write("Hello, welcome to the random activity generator! \nWould you like to generate a random activity? yes/no: ");
             //bool cont = bool.Parse(Console.ReadLine());
             string contResponse = Console.ReadLine();
+
+            if (contResponse == "yes")
+            {
+                cont = true;
+            }
+            else
+            {
+                cont = false;
+                Environment.Exit(0);
+            }
             Console.WriteLine();
             Console.Write("We are going to need your information first! What is your name? ");
             string userName = Console.ReadLine();
@@ -30,8 +40,11 @@ namespace ProblematicProblem
                 {
                 seeList = true;
                 }
-            else
-                { seeList = false; }
+            else 
+                {
+                seeList = false;
+                Environment.Exit(0);
+                }
 
             if (seeList)
             {
